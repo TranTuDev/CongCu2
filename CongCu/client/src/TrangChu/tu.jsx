@@ -1,11 +1,7 @@
-import React from 'react'
-
-function tu() {
-  return (
-    <div>tu
-        hlkdsfnl
-    </div>
-  )
+const TrangChu = () => {
+  return (<div>
+    chao mừng bạn đến với trang chủ
+  </div>);
 }
 
-export default tu
+export default TrangChu;
