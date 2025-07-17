@@ -1,0 +1,80 @@
+.movie-view{
+    width: 90%;
+    height: auto;
+    // border:  1px solid black;
+    margin-left: 5%;
+    .navbar{
+        width: 60%;
+        height: auto;
+        // border:  1px solid black;
+        display: flex;
+        justify-content: space-around;
+        text-transform: capitalize;
+        h1{
+            margin: .5rem;
+            cursor: pointer;
+            padding-left: .2rem;
+            border-left: .3rem solid red;
+            &:hover{
+                color: red;
+                border-left: .3rem solid black;
+            }
+        }
+        p{
+            margin: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+              &:hover{
+                color: red;
+            }
+        }
+    }
+    .movie-list{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 2rem;
+        .movie-item{
+            width: 70%;
+            height: 80%;
+            // border: 1px solid black;
+            margin-bottom: 1rem;
+            // padding: .5rem;
+            margin-left: 10%;
+            cursor: pointer;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: .5rem;
+                object-fit: cover;
+                &:hover{
+                    transform: scale(1.05);
+                    transition: all .3s ease-in-out;
+                    border: 3px solid red;
+                }
+            }
+            button{
+                width: 40%;
+                height: auto;
+                float: right;
+                padding: .3rem;
+                border: none;
+                background-color: red;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+                text-transform: capitalize;
+                border-radius: 1rem;
+                &:hover{
+                    background-color: rgb(206, 99, 99);
+                }
+                .icon{
+                    font-size: 1.2rem;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
