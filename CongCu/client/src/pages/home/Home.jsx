@@ -1,6 +1,7 @@
 import React from 'react'
 
-function tu() {
+
+function Home() {
   return (
     <div>tu
         hlkdsfnl
@@ -8,4 +9,4 @@ function tu() {
   )
 }
 
-export default tu
+export default Home
