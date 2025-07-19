@@ -1,0 +1,314 @@
+
+$date-bg: #f3f3f3;
+$active-color: #007bff;
+$text-color: #333;
+$border-radius: 8px;
+.ticket_movie{
+    width: 90%;
+    height: auto;
+    // border: 1px solid black;
+    margin-left: 5%;
+    .content{
+        width: auto;
+        height: auto;
+        border-bottom: 1px solid black;
+        margin-left: 10%;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .movie_item{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 2rem;
+        border-bottom: .1rem solid red;
+        margin-top: 1rem;
+        .image{
+            width: 25%;
+            height: auto;
+            margin-left: 10%;
+            // border: 1px solid black;
+            img{
+                width: 100%;
+                height: 30rem;
+                object-fit: cover;
+                &:hover{
+                    transform: scale(1.05);
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        .description{
+            margin-top: 2%;
+            width: 70%;
+            height: auto;
+            // border: 1px solid black;
+            text-transform: capitalize;
+            table{
+                width: 100%;
+                height: auto;
+                border-collapse: collapse;
+            td{
+                padding: .5rem;
+            }
+            #tt{
+                    font-weight: 700;
+                    width: 20%;
+                }
+            }
+            
+        }
+    }
+    .select{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 30%;
+        margin-top: 2%;
+        p{
+            width: 20%;
+            height: auto;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin-top: 1rem;
+            select{
+                width: 100%;
+                height: 2rem;
+                border-radius: .5rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .date-picker {
+        width: 84%;
+        height: auto;
+        margin-left: 6%;
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 16px;
+  background-color: $date-bg;
+  border-radius: $border-radius;
+  .date-option {
+    input {
+            display: none;
+        }
+
+    .date-label {
+            display: inline-block;
+            padding: 10px;
+            min-width: 80px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &.active {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border-color: #007bff;
+            }
+        }
+    }
+}
+
+ h3{
+        margin-left: 5%;
+        margin-top: 2%;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+  .time{
+    margin-left: 5%;
+    width: 40%;
+    height: auto;
+    // border: 1px solid black;
+    margin-bottom: 10%;
+    // flex-wrap: wrap;
+   
+    .box_time_group{
+           display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+        .box_time{
+        width: 70%;
+        height: auto;
+        padding: .2rem;
+        border: 1px solid black;
+        text-align: center;
+        background-color: rgb(229, 216, 201);
+        cursor: pointer;
+        }
+    }
+  }
+.seat_pay{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 5px;
+    .seat{
+    width: 70%;
+    height: auto;
+    background-color: rgba(38, 37, 37, 0.642);
+    
+    margin-bottom: 2rem;
+    h2{
+        text-transform: uppercase;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .tv{
+        width: 27%;
+        height: auto;
+        background-color: whitesmoke;
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+        margin-left: 37%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .select_seat{
+        width: 70%;
+        height: auto;
+        display: grid;
+        padding-bottom: 2rem;
+        grid-template-columns: repeat(10, 0.5fr);
+        text-align: center;
+        margin-left: 15%;
+        // border: 1px solid red;
+        // z-index: 9;
+        .box_seat{
+            width: 100%;
+            height: auto;
+            border: 1px solid red;
+            background-color: bisque;
+            cursor: pointer;
+            &:hover{
+                // background-color: rgb(50, 45, 38);
+                background-color: whitesmoke;
+            }
+            &.selecting {
+                background-color: red !important;
+            }
+
+            &.selected {
+                background-color: rgb(75, 75, 75) !important;
+                pointer-events: none;
+                color: white;
+            }
+
+            &.unselected {
+                background-color: black !important;
+                color: white;
+            }
+                    }
+    }
+.box_seat.selecting {
+  background-color: red !important;
+  color: white;
+}
+
+.box_seat.selected {
+  background-color: rgb(75, 75, 75) !important;
+  color: white;
+  pointer-events: none;
+}
+
+.box_seat.unselected {
+  background-color: black !important;
+  pointer-events: none;
+  color: white;
+}
+    .note_seat{
+    width:25%;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-left: 5%;
+    // border: 1px solid black;
+    padding-bottom: 2rem;
+    h4{
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+        margin-left: 2rem;
+        text-transform: capitalize;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+        margin-left: 2rem;
+        .selecting_seat, .selected_seat, .unselected_seat {
+            width: min-content;
+            height: auto;
+            padding: 1rem;
+            border: 1px solid red;
+            background-color: rgb(234, 54, 54);
+            margin-right: 1rem;
+        }
+        .selected_seat{
+            background-color: rgb(75, 75, 75);
+        }
+        .unselected_seat{
+            background-color: black;
+        }
+    }
+  }
+}
+.buy{
+    width: 30%;
+    height: auto;
+    margin-bottom: 2rem;
+    background-color: #ada9a9;
+    border-radius: 20px;
+    // border: 1px solid black;
+    h2{
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 1rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 1rem;
+        // text-align: center;
+       
+    }
+     #time{
+            border-bottom: 1px solid black;
+            margin-bottom: 5rem;
+        }
+        span{
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1rem;
+            // text-align: center;
+        }
+        button{
+            width: 30%;
+            height: auto;
+            padding: .5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 40%;
+        }
+}
+}
+}
+
